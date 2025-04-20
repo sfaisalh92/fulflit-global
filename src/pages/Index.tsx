@@ -16,14 +16,19 @@ const Index = () => {
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
         const visible = rect.top < window.innerHeight && rect.bottom >= 0;
+        
         if (visible) {
-          const speed = section.getAttribute('data-speed') || '0.5';
-          const yPos = -(rect.top * Number(speed));
-          section.style.transform = `translate3d(0, ${yPos}px, 0)`;
+          section.style.opacity = '1';
+          section.style.transform = 'translateY(0)';
+        } else {
+          section.style.opacity = '0';
+          section.style.transform = 'translateY(50px)';
         }
       });
     };
 
+    // Initial check for elements in view
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -45,4 +50,3 @@ const Index = () => {
 };
 
 export default Index;
-

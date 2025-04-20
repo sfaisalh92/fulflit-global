@@ -98,4 +98,10 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+  }
 }
