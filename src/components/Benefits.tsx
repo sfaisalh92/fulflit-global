@@ -12,14 +12,14 @@ const Benefits = () => {
   ];
 
   return (
-    <section id="benefits" className="py-20 bg-blue-900 text-white">
+    <section id="benefits" className="py-20 bg-[#191919] text-white relative" data-speed="0.2">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Why Choose Us?</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-[#eec899]">Why Choose Us?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
-                <Check className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <Check className="h-6 w-6 text-[#eec899] flex-shrink-0" />
                 <span className="text-lg">{benefit}</span>
               </div>
             ))}
@@ -31,3 +31,4 @@ const Benefits = () => {
 };
 
 export default Benefits;
+
