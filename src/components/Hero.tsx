@@ -5,20 +5,35 @@ import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <div className="pt-24 pb-16 bg-gradient-to-b from-[#eec899]/10 to-white relative" data-speed="0.3">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-[#191919] mb-6 transition-transform">
-            Simplify Your Global Logistics Operations
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Streamline your cross-border warehousing and logistics with our intelligent management platform
-          </p>
-          <Link to="quote" spy={true} smooth={true} offset={-64} duration={500}>
-            <Button className="bg-[#eec899] hover:bg-[#e5b880] text-[#191919] font-semibold px-8 py-6 rounded-lg text-lg shadow-lg hover:shadow-xl transition-all">
-              Get Started <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
+    <div 
+      className="relative min-h-screen bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: 'url("https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2000")',
+      }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-[#191919]/70" />
+
+      {/* Content */}
+      <div className="relative pt-32 pb-20 px-4 md:px-8 min-h-screen flex items-center">
+        <div className="container mx-auto">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              Your end-to-end supply chain, all in one platform
+            </h1>
+            <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">
+              CargoGlide is the platform that coordinates global logistics from factory
+              to customer door — empowering businesses to ship anywhere, sell
+              everywhere and grow faster.
+            </p>
+            <Link to="quote" spy={true} smooth={true} offset={-64} duration={500}>
+              <Button 
+                className="bg-[#eec899] hover:bg-[#e5b880] text-[#191919] font-semibold px-8 py-6 rounded-lg text-lg shadow-lg hover:shadow-xl transition-all"
+              >
+                Talk to an Expert <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
@@ -26,4 +41,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
