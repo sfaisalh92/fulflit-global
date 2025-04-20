@@ -1,4 +1,3 @@
-
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -16,7 +15,7 @@ const QuoteForm = () => {
   };
 
   return (
-    <section id="quote" className="py-20 bg-gray-50">
+    <section id="quote" className="py-20 bg-gray-50 relative" data-speed="0.25">
       <div className="container mx-auto px-4">
         <div className="max-w-lg mx-auto">
           <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Request a Quote</h2>

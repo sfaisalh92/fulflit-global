@@ -1,10 +1,9 @@
-
 import { Card } from "./ui/card";
 import { Monitor } from "lucide-react";
 
 const Platform = () => {
   return (
-    <section id="platform" className="py-20 bg-gray-50">
+    <section id="platform" className="py-20 bg-gray-50 relative" data-speed="0.15">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Our Platform</h2>
