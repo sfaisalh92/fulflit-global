@@ -1,5 +1,24 @@
+
 import { Card } from "./ui/card";
-import { Monitor } from "lucide-react";
+import { Monitor, Workflow, BarChart } from "lucide-react";
+
+const platformFeatures = [
+  {
+    title: "Real-time Tracking",
+    description: "Monitor your shipments and inventory in real-time",
+    icon: <Monitor className="mr-2 h-5 w-5" />,
+  },
+  {
+    title: "Automated Workflows",
+    description: "Streamline operations with intelligent automation",
+    icon: <Workflow className="mr-2 h-5 w-5" />,
+  },
+  {
+    title: "Analytics Dashboard",
+    description: "Data-driven insights for better decision making",
+    icon: <BarChart className="mr-2 h-5 w-5" />,
+  },
+];
 
 const Platform = () => {
   return (
@@ -9,21 +28,20 @@ const Platform = () => {
           <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Our Platform</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
             <div className="space-y-6">
-              <Card className="p-6">
-                <h3 className="font-bold text-xl mb-3 flex items-center">
-                  <Monitor className="mr-2 h-5 w-5 text-blue-600" />
-                  Real-time Tracking
-                </h3>
-                <p className="text-gray-600">Monitor your shipments and inventory in real-time</p>
-              </Card>
-              <Card className="p-6">
-                <h3 className="font-bold text-xl mb-3">Automated Workflows</h3>
-                <p className="text-gray-600">Streamline operations with intelligent automation</p>
-              </Card>
-              <Card className="p-6">
-                <h3 className="font-bold text-xl mb-3">Analytics Dashboard</h3>
-                <p className="text-gray-600">Data-driven insights for better decision making</p>
-              </Card>
+              {platformFeatures.map((feature) => (
+                <Card
+                  key={feature.title}
+                  className="transition-colors p-6 group hover:bg-[#191919] hover:text-[#eec899] cursor-pointer"
+                >
+                  <h3 className="font-bold text-xl mb-3 flex items-center group-hover:text-[#eec899] transition-colors">
+                    {feature.icon}
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 group-hover:text-[#eec899] transition-colors">
+                    {feature.description}
+                  </p>
+                </Card>
+              ))}
             </div>
             <div className="bg-gray-200 rounded-lg h-[400px] flex items-center justify-center">
               <p className="text-gray-500">Platform Screenshot</p>

@@ -30,7 +30,7 @@ const Hero = () => {
               <Button 
                 className="bg-[#eec899] hover:bg-[#e5b880] text-[#191919] font-semibold px-8 py-6 rounded-lg text-lg shadow-lg hover:shadow-xl transition-all"
               >
-                Talk to an Expert <ArrowRight className="ml-2 h-5 w-5" />
+                Get a Quote <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </div>
