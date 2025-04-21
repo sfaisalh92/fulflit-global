@@ -111,8 +111,8 @@ const Services = () => {
                   {service.description}
                 </p>
               </div>
-              {/* Hover effects via Tailwind group-hover */}
-              <style jsx>{`
+              {/* Hover effects */}
+              <style dangerouslySetInnerHTML={{ __html: `
                 .group:hover .text-white svg {
                   color: #eec899 !important;
                 }
@@ -123,7 +123,7 @@ const Services = () => {
                 .group:hover button {
                   background: #191919 !important;
                 }
-              `}</style>
+              `}} />
             </div>
           ))}
         </div>
