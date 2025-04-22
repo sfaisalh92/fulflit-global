@@ -1,6 +1,7 @@
 
 import { Card } from "./ui/card";
 import { Monitor, Workflow, BarChart } from "lucide-react";
+import Image from 'next/image';
 
 const platformFeatures = [
   {
@@ -43,8 +44,12 @@ const Platform = () => {
                 </Card>
               ))}
             </div>
-            <div className="bg-gray-200 rounded-lg h-[400px] flex items-center justify-center">
-              <p className="text-gray-500">Platform Screenshot</p>
+            <div className="rounded-lg h-[400px] flex items-center justify-center overflow-hidden shadow-lg">
+              <img 
+                src="/lovable-uploads/9c55adf8-280f-4506-8710-c70e136d9d83.png" 
+                alt="Platform Dashboard Screenshot" 
+                className="w-full h-full object-cover object-center"
+              />
             </div>
           </div>
         </div>
