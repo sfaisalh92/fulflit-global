@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 
 const services = [
@@ -7,14 +6,11 @@ const services = [
     description:
       "We handle the coordination, receipt, and transportation of your goods into your storage facilities or production plants, ensuring timely and accurate deliveries every step of the way.",
     icon: (
-      <svg width={62} height={46} viewBox="0 0 62 46" fill="none" className="mb-4 transition-colors group-hover:[&_*]:stroke-white [&_*]:stroke-[#191919]">
-        <rect x="1" y="15" width="40" height="23" rx="3" stroke="#191919" strokeWidth="2" />
-        <rect x="12" y="1" width="23" height="18" rx="2" stroke="#191919" strokeWidth="2" />
-        <rect x="20" y="25" width="6" height="6" rx="2" stroke="#191919" strokeWidth="2" />
-        <line x1="5" y1="38" x2="37" y2="38" stroke="#191919" strokeWidth="1.5" />
-        <circle cx="10" cy="40" r="3" stroke="#191919" strokeWidth="2" />
-        <circle cx="32" cy="40" r="3" stroke="#191919" strokeWidth="2" />
-      </svg>
+      <img 
+        src="/lovable-uploads/9a176d12-31ca-4d9e-8ce3-932daefaed34.png" 
+        alt="Inbound Logistics" 
+        className="w-12 h-12 mb-4 transition-all group-hover:brightness-0 group-hover:invert"
+      />
     ),
   },
   {
@@ -22,11 +18,11 @@ const services = [
     description:
       "From order picking to final mile delivery, we ensure your products reach customers efficiently, safely and with optimized routes for speed and cost.",
     icon: (
-      <svg width={62} height={46} viewBox="0 0 62 46" fill="none" className="mb-4 transition-colors group-hover:[&_*]:stroke-white [&_*]:stroke-[#191919]">
-        <rect x="8" y="13" width="40" height="23" rx="4" stroke="#191919" strokeWidth="2" />
-        <rect x="17" y="4" width="23" height="18" rx="3" stroke="#191919" strokeWidth="2" />
-        <rect x="26" y="21" width="7" height="11" rx="2" stroke="#191919" strokeWidth="2" />
-      </svg>
+      <img 
+        src="/lovable-uploads/fe2a8807-cefa-41a7-b0bf-b4b7c2dbe07a.png" 
+        alt="Outbound Logistics" 
+        className="w-12 h-12 mb-4 transition-all group-hover:brightness-0 group-hover:invert"
+      />
     ),
   },
   {
@@ -34,11 +30,11 @@ const services = [
     description:
       "Store products in secure, modern facilities and let us handle picking, packing, and order shipping with end-to-end tracking.",
     icon: (
-      <svg width={62} height={46} viewBox="0 0 62 46" fill="none" className="mb-4 transition-colors group-hover:[&_*]:stroke-white [&_*]:stroke-[#191919]">
-        <path d="M33 42C33 35.9249 40.9518 32.4931 41 23C41.0296 17.5526 34.8767 8.75958 30.6046 9.00661C25.3553 9.29684 23.0055 17.3662 23 22.5C22.9946 27.6338 32 31 32 42" stroke="#191919" strokeWidth="2" />
-        <circle cx="32" cy="22" r="4" stroke="#191919" strokeWidth="2" />
-        <line x1="32" y1="3" x2="32" y2="7" stroke="#191919" strokeWidth="2" />
-      </svg>
+      <img 
+        src="/lovable-uploads/69f3de4a-7009-469e-86f2-93f00eddf90f.png" 
+        alt="Warehousing and Order Fulfillment" 
+        className="w-12 h-12 mb-4 transition-all group-hover:brightness-0 group-hover:invert"
+      />
     ),
   },
   {
@@ -46,12 +42,11 @@ const services = [
     description:
       "Simplify global shipping: we manage customs, paperwork, and international transport for seamless cross-border fulfillment.",
     icon: (
-      <svg width={62} height={46} viewBox="0 0 62 46" fill="none" className="mb-4 transition-colors group-hover:[&_*]:stroke-white [&_*]:stroke-[#191919]">
-        <rect x="18" y="8" width="29" height="18" rx="2" stroke="#191919" strokeWidth="2" />
-        <rect x="1.5" y="16.5" width="29" height="18" rx="2.5" stroke="#191919" strokeWidth="2" />
-        <path d="M32.5 26L46.5 39" stroke="#191919" strokeWidth="2"/>
-        <path d="M47.5 8.5L60.5 21.5" stroke="#191919" strokeWidth="2"/>
-      </svg>
+      <img 
+        src="/lovable-uploads/be4ea4fb-b861-4b4b-9ffe-42149a56bdcb.png" 
+        alt="Cross Border Logistics" 
+        className="w-12 h-12 mb-4 transition-all group-hover:brightness-0 group-hover:invert"
+      />
     ),
   },
 ];
