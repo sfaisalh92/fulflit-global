@@ -1,4 +1,3 @@
-
 import { Card } from "./ui/card";
 import { Monitor, Workflow, BarChart } from "lucide-react";
 import {
@@ -56,23 +55,23 @@ const Platform = () => {
                 </Card>
               ))}
             </div>
-            <div className="rounded-lg h-[600px] flex items-center justify-center overflow-hidden shadow-lg">
-              <Carousel className="w-full h-full">
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <Carousel className="w-full">
                 <CarouselContent>
                   {platformImages.map((image, index) => (
                     <CarouselItem key={index}>
-                      <div className="w-full h-[600px]">
+                      <div className="aspect-[16/9] relative">
                         <img
                           src={image}
                           alt={`Platform Screenshot ${index + 1}`}
-                          className="w-full h-full object-cover object-center"
+                          className="absolute inset-0 w-full h-full object-contain bg-white"
                         />
                       </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
               </Carousel>
             </div>
           </div>
