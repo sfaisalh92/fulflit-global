@@ -1,7 +1,6 @@
 
 import { Card } from "./ui/card";
 import { Monitor, Workflow, BarChart } from "lucide-react";
-import Image from 'next/image';
 
 const platformFeatures = [
   {
