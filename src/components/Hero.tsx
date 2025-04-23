@@ -8,7 +8,7 @@ const Hero = () => {
     <div 
       className="relative min-h-screen bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: 'url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2000")',
+        backgroundImage: 'url("https://images.unsplash.com/photo-1665239047402-a0e8e0d70bb5?auto=format&fit=crop&w=2000")',
       }}
     >
       {/* Dark overlay */}
