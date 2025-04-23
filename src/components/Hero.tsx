@@ -8,7 +8,7 @@ const Hero = () => {
     <div 
       className="relative min-h-screen bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: 'url("https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2000")',
+        backgroundImage: 'url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2000")',
       }}
     >
       {/* Dark overlay */}
@@ -28,7 +28,7 @@ const Hero = () => {
             </p>
             <Link to="quote" spy={true} smooth={true} offset={-64} duration={500}>
               <Button 
-                className="bg-[#eec899] hover:bg-[#e5b880] text-[#191919] font-semibold px-8 py-6 rounded-lg text-lg shadow-lg hover:shadow-xl transition-all"
+                className="bg-[#eec899] hover:bg-[#191919] text-[#191919] hover:text-[#eec899] font-semibold px-8 py-6 rounded-lg text-lg shadow-lg hover:shadow-xl transition-all"
               >
                 Get a Quote <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
