@@ -22,7 +22,7 @@ const Hero = () => {
               Your end-to-end supply chain, all in one platform
             </h1>
             <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">
-              CargoGlide is the platform that coordinates global logistics from factory
+              Fulflit is the platform that coordinates global logistics from factory
               to customer door — empowering businesses to ship anywhere, sell
               everywhere and grow faster.
             </p>

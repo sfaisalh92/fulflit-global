@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <h3 className="text-xl font-bold mb-4">CargoGlide</h3>
+            <h3 className="text-xl font-bold mb-4">fulflit.</h3>
             <p className="text-gray-400">
               Simplifying cross-border logistics for businesses worldwide
             </p>
@@ -17,11 +17,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone className="h-5 w-5 mr-2" />
-                <span>+1 (555) 123-4567</span>
+                <span>+92 (339) 0072155</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 mr-2" />
-                <span>contact@cargoglide.com</span>
+                <span>info@fulflit.com</span>
               </div>
               <div className="flex items-center">
                 <MessageSquare className="h-5 w-5 mr-2" />
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 CargoGlide. All rights reserved.</p>
+          <p>&copy; 2025 fulflit. All rights reserved.</p>
         </div>
       </div>
     </footer>
