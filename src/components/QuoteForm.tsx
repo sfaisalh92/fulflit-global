@@ -21,25 +21,44 @@ const QuoteForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    const timestamp = new Date().toISOString();
-    const subject = `Lead [${timestamp}]`;
-    const body = `Following lead is submitted on fulflit website
-- Name: ${formData.name}
-- Email: ${formData.email}
-- Company Name: ${formData.company}
-- Message: ${formData.message}`;
-
-    const mailtoLink = `mailto:info@fulflit.com?cc=fawwad@fulflit.com;faisal@fulflit.com;waqas@fulflit.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const formDataToSubmit = new FormData();
+    formDataToSubmit.append('Name', formData.name);
+    formDataToSubmit.append('Email', formData.email);
+    formDataToSubmit.append('Company Name', formData.company);
+    formDataToSubmit.append('Message', formData.message);
     
-    window.location.href = mailtoLink;
-    
-    toast({
-      title: "Opening email client...",
-      description: "Please send the email from your email application.",
-    });
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbxcxEvjksN5dK29seJpaTVuHjLR1Bdq4ZxFLMov_kJkrpbPRt7BAbK57SgKYgCOPE3DPg/exec', {
+        method: 'POST',
+        body: formDataToSubmit
+      });
+      
+      if (response.ok) {
+        toast({
+          title: "Success!",
+          description: "Your request has been submitted successfully.",
+        });
+        
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          message: ""
+        });
+      } else {
+        throw new Error('Failed to submit');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to submit your request. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
