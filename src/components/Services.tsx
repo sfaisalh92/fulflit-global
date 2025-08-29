@@ -61,7 +61,7 @@ const Services = () => {
             You give us the task and the desired result, and we will come up with the best logistics scheme for fast and safe delivery.
           </div>
           <div className="relative flex-1 flex flex-col md:items-end">
-            <h2 className="font-bold text-3xl md:text-5xl text-[#191919] mb-3 leading-tight text-right md:text-right">
+            <h2 className="font-bold text-3xl md:text-5xl text-[#191919] mb-3 leading-tight text-left md:text-right pr-0 md:pr-8">
               Find the most profitable<br />way of delivery
             </h2>
           </div>

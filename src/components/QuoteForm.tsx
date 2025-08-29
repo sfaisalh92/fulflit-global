@@ -3,15 +3,42 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useToast } from "./ui/use-toast";
+import { useState } from "react";
 
 const QuoteForm = () => {
   const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    message: ""
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const timestamp = new Date().toISOString();
+    const subject = `Lead [${timestamp}]`;
+    const body = `Following lead is submitted on fulflit website
+- Name: ${formData.name}
+- Email: ${formData.email}
+- Company Name: ${formData.company}
+- Message: ${formData.message}`;
+
+    const mailtoLink = `mailto:info@fulflit.com?cc=fawwad@fulflit.com;faisal@fulflit.com;waqas@fulflit.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.location.href = mailtoLink;
+    
     toast({
-      title: "Quote Request Received",
-      description: "We'll get back to you within 24 hours.",
+      title: "Opening email client...",
+      description: "Please send the email from your email application.",
     });
   };
 
@@ -49,30 +76,42 @@ const QuoteForm = () => {
           >
             <div>
               <Input
+                name="name"
                 placeholder="Your Name"
                 required
+                value={formData.name}
+                onChange={handleInputChange}
                 className="bg-[#f5f5f5] text-[#191919] placeholder:text-gray-500 rounded-lg border-none h-12"
               />
             </div>
             <div>
               <Input
+                name="email"
                 type="email"
                 placeholder="Your Email"
                 required
+                value={formData.email}
+                onChange={handleInputChange}
                 className="bg-[#f5f5f5] text-[#191919] placeholder:text-gray-500 rounded-lg border-none h-12"
               />
             </div>
             <div>
               <Input
+                name="company"
                 placeholder="Company Name"
                 required
+                value={formData.company}
+                onChange={handleInputChange}
                 className="bg-[#f5f5f5] text-[#191919] placeholder:text-gray-500 rounded-lg border-none h-12"
               />
             </div>
             <div>
               <Textarea
+                name="message"
                 placeholder="Tell us about your logistics needs"
                 required
+                value={formData.message}
+                onChange={handleInputChange}
                 className="bg-[#f5f5f5] text-[#191919] placeholder:text-gray-500 rounded-lg border-none h-24 resize-none"
               />
             </div>
@@ -80,7 +119,7 @@ const QuoteForm = () => {
               type="submit"
               className="w-full bg-[#eec899] hover:bg-[#e5b880] text-white text-lg h-12 rounded-full font-semibold shadow-md transition"
             >
-              Get Quote
+              Share your needs with us
             </Button>
             <div className="text-xs text-gray-400 text-center pt-1 leading-relaxed">
               By clicking on the button "Get quote" you confirm that you agree<br />

@@ -19,7 +19,7 @@ const Hero = () => {
         <div className="container mx-auto">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Your end-to-end supply chain, all in one platform
+              An all-in-one fulfilment platform, for your cross-border logistics needs
             </h1>
             <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">
               Fulflit is the platform that coordinates global logistics from factory
@@ -30,7 +30,7 @@ const Hero = () => {
               <Button 
                 className="bg-[#eec899] hover:bg-[#191919] text-[#191919] hover:text-[#eec899] font-semibold px-8 py-6 rounded-lg text-lg shadow-lg hover:shadow-xl transition-all"
               >
-                Get a Quote <ArrowRight className="ml-2 h-5 w-5" />
+                Share your needs with us <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </div>
