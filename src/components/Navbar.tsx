@@ -32,7 +32,7 @@ const Navbar = () => {
             ))}
             <Button 
               onClick={() => window.open('https://core.fulflit.com/', '_blank')}
-              className="bg-[#eec899] hover:bg-[#191919] text-[#191919] hover:text-[#eec899] font-semibold px-6 py-2 rounded-lg text-sm shadow-lg hover:shadow-xl transition-all"
+              className="bg-[#eec899] hover:bg-[#191919] text-[#191919] hover:text-[#eec899] px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all"
             >
               Sign up Here!
             </Button>
