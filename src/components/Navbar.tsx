@@ -80,7 +80,7 @@ const Navbar = () => {
             </Dialog>
             
             <Button 
-              onClick={() => window.open('https://core.fulflit.com/', '_blank')}
+              onClick={() => window.open('https://core.fulflit.com/customer/register', '_blank')}
               className="bg-[#eec899] hover:bg-[#191919] text-[#191919] hover:text-[#eec899] px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all"
             >
               Sign up Here!
