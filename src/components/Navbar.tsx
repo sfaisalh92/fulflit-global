@@ -62,7 +62,7 @@ const Navbar = () => {
                   <div className="flex flex-col items-center space-y-4">
                     <Input
                       type="text"
-                      placeholder="Enter tracking number"
+                      placeholder="Please enter your tracking number"
                       value={trackingNumber}
                       onChange={(e) => setTrackingNumber(e.target.value)}
                       className="w-full text-center"
@@ -70,9 +70,9 @@ const Navbar = () => {
                     />
                     <Button 
                       type="submit" 
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2"
+                      className="bg-[#eec899] hover:bg-[#191919] text-[#191919] hover:text-[#eec899] px-6 py-2"
                     >
-                      Track Order
+                      Track Now
                     </Button>
                   </div>
                 </form>
